@@ -1,0 +1,16 @@
+{
+    "name": "zemljaci/citrus-com",
+    "authors": [
+        {
+            "name": "Ivan Markovic",
+            "email": "ivan.markovic1402@gmail.com"
+        }
+    ],
+    "type": "class",    
+    "autoload" : {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
