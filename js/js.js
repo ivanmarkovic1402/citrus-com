@@ -48,6 +48,18 @@ function makeComments(comments){
 return commentDiv;
 }
 
+function makeCommentButton(){
+    let commentButton = '';
+
+    commentButton +=`<div class="mb-4">
+                        <div class="text-left">
+                        <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#basicModal" id="modalUp">New Comment</a>
+                        </div>
+                    </div>`;
+
+    return commentButton;
+}
+
 function makeProductTable(products){
     let productDiv = '';
 
@@ -66,8 +78,11 @@ function makeProductTable(products){
                 productDiv += "<hr>";
                 productDiv += "<h6>Comments</h6>";
                 productDiv += "<hr>";
+                // productDiv += "<div class='commentForm'>";
+                productDiv += makeCommentButton();
+                // productDiv += "</div>";
+                productDiv += "<hr>";
                 productDiv += makeComments(val.comments);
-                // productDiv += makeCommentForm();
                 productDiv += "</div>";
             });
         productDiv += "</div>";
@@ -77,5 +92,3 @@ function makeProductTable(products){
     $('#productDiv').html(productDiv);
 
 }
-
-
