@@ -8,7 +8,7 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
-
+<script src="js/commentModal.js"></script>
 <script src="js/js.js"></script>
 
 </body>

@@ -46,6 +46,7 @@ class Product extends dbHandler
                         'comment_name' => $comment->name,
                         'comment_email' => $comment->email,
                         'comment_text' => $comment->text,
+                        'comment_date' => $comment->date,
                         'comment_approved' => $comment->approved
                     ];
                     array_push($productsWithComments[$k]['comments'], $product_comments);

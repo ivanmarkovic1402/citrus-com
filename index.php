@@ -2,7 +2,6 @@
 
     include ('parts/header.php');
     include ('parts/navbar.php');
-    include ('parts/commentModal.php');
 
 ?>
 
