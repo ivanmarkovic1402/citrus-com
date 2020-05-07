@@ -34,13 +34,13 @@ function makeComments(comments){
 
     if(typeof comments !== 'undefined' && comments.length > 0){
         $.each(comments, function(k, comment){
-            // if(comment.comment_approved == 1){
+            if(comment.comment_approved == 1){
                 commentDiv += "<p class='description'>" + comment.comment_text + "</p>";
                 commentDiv += "<br><div class='d-flex  items-align-bottom  justify-content-between'>";
                 commentDiv += "<div class='small float-left'>" + comment.comment_date + "</div><br>";
                 commentDiv += "<div class='small float-right'>Posted by " + comment.comment_name + "</div></div>";
                 commentDiv += "<hr>";
-            // }
+            }
         });
     }
     if(commentDiv == ''){
