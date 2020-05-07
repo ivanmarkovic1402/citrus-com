@@ -186,26 +186,32 @@ $(document).on('click', '[id^=btnSubmitComment]', function(e){
 
 });
 
+$('#loginForm').on('click', '#btnSubmit', function(e){
+  e.preventDefault();
+
+  let username = $('#username').val();
+  let password = $('#password').val();
+
+  $.ajax({
+    url:'processing/processingLogin.php',
+    method: "POST",
+    data: {username: username, password:password},
+    success: function(res){
+      location.href = 'adminpanel.php'
+    }
+  }).fail(function(res){
+    console.log('error');
+    console.log(res);
+  });
+
+});
+
 
     
 
 //$('[id^=commentForm]').(input).html(''); // ovde treba da se gadja svaki input posebno
 
 //$('#commentForm' + product_id)[0].reset(); // i ovde da se proba sa petljom
-
-
-// location.reload();
-    // $('#name' + product_id).removeAttr('value');
-    // $('#email' + product_id).val("");
-    // $('#comment_text' + product_id).val("");
-    // $('#product_id').val("");
-
-    // product_id = null;
-    // name = null;
-    // email=null;
-    // comment_text = null;
-
-// });
 
 // $(document).click('#closeBtn', function(){
 //     alert('dfdfd');

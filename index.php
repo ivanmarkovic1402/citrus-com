@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     include ('parts/header.php');
     include ('parts/navbar.php');
@@ -29,22 +30,6 @@
 </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
