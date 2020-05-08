@@ -11,5 +11,13 @@
 <script src="js/commentModal.js"></script>
 <script src="js/js.js"></script>
 
+
+<?php
+    if(isset($_SESSION['user']) && $_SESSION['user'] == 'admin'){
+        echo "<script src='js/admin_js.js'></script>";
+    }
+?>
+
+
 </body>
 </html>

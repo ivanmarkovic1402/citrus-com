@@ -30,6 +30,38 @@ class Comment extends dbHandler
         }
 
     }
+
+    public function approveComment($comment_id)
+    {
+        $query = "UPDATE comments SET approved=:approved WHERE id=:id";
+        $params = [
+            ':id'       => $comment_id,
+            ':approved' => 1,
+        ];
+
+        try{
+            $this->do_my_query($query, $params);
+        }catch(PDOException $e){
+            $e->getMessage();
+        }
+    }
+
+    public function deleteComment($comment_id)
+    {
+        $query = "DELETE FROM comments WHERE id=:id";
+        $params = [
+            ':id'       => $comment_id,
+        ];
+
+        try{
+            $this->do_my_query($query, $params);
+        }catch(PDOException $e){
+            $e->getMessage();
+        }
+    }
+
+
+
 }
 
 

@@ -16,18 +16,12 @@
 ?>
 
 <div class="container">
-    <table class="table table-striped">
+    <table class="table table-striped" id="commentAdminTable">
         <thead>
-            <td>Posted by</td><td>Email</td><td>Comment</td><td>Approve</td><td>Delete</td>
+            <td>Posted by</td><td>Email</td><td>Comment</td><td>Date</td><td>Approve</td><td>Delete</td>
         </thead>
         <tbody>
-            <?php
-                // foreach($comments as $comment){
-                //     if($comment->approved == 0){
-                //         echo "<tr><td>".$comment->name."</td><td>".$comment->email."</td><td>".$comment->text."</td><td><button class='btn btn-success' id='btnApprove".$comment->id."' data-comment=".$comment->id.">Approve this comment</button></td><td><button class='btn btn-danger' id='btnDelete".$comment->id."' data-comment=".$comment->id." >Delete this comment</button></td><tr>";
-                //     }
-                // }
-            ?>
+
         </tbody>
     </table>
 </div>

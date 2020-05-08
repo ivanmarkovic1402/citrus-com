@@ -8,6 +8,16 @@
         $comment->postComment($_POST['product_id'],$_POST['name'], $_POST['email'], $_POST['comment_text']);
     }
 
+    if(isset($_POST['comment_id']) && (isset($_POST['action']) && $_POST['action'] == 'approve')){
+        $comment->approveComment($_POST['comment_id']);
+        // header("Location: ../index.php");
+    }
+
+    if(isset($_POST['comment_id']) && (isset($_POST['action']) && $_POST['action'] == 'delete' )){
+        $comment->deleteComment($_POST['comment_id']);
+        // header("Location: ../index.php");
+    }
+
 echo json_encode($_POST);
 
 ?>
