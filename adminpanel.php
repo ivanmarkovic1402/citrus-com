@@ -9,10 +9,6 @@
     include ('parts/header.php');
     include ('parts/navbar.php');
 
-    // $comment = new Comment();
-    // $comments = $comment->getAllcomments();
-
-// var_dump($comments);
 ?>
 
 <div class="container">

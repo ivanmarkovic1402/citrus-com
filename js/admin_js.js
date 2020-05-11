@@ -2,7 +2,8 @@ $(document).ready(function() {
 
     axios.get('/processing/processingProducts.php')
     .then(function (response) {
-        makeCommentsApproveTable(response.data);
+        let products = response.data;
+        makeCommentsApproveTable(products);
     })
     .catch(function (error) {
         console.log(error);

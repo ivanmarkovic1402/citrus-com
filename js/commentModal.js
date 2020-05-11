@@ -33,4 +33,3 @@ let commentModal =`
 `;
 return commentModal;
 }
-{/* <button type='submit' name='btnSubmitComment${id}' id='btnSubmitComment${id}' data-id='${id}' class='btn btn-success'>Post comment</button> */}

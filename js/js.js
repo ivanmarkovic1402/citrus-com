@@ -1,11 +1,9 @@
 
 $(document).ready(function() {  
-
     axios.get('/processing/processingProducts.php')
     .then(function (response) {
-        console.log(response.data);
-
-        makeProductTable(response.data);
+        let products = response.data;
+        makeProductTable(products);
     })
     .catch(function (error) {
         console.log(error);
@@ -152,7 +150,6 @@ $(document).on('click', '[id^=btnSubmitComment]', function(e){
     let formValidation = validation(data);
 
     if(typeof formValidation !== 'undefined' && formValidation.length > 0){
-      console.log(formValidation);
       $.each(formValidation, function(key, value){
         alert(value);
       });
@@ -165,7 +162,7 @@ $(document).on('click', '[id^=btnSubmitComment]', function(e){
         data: data,
         success: function(r) {
 
-          // location.reload();
+          location.reload();
 
           // console.log(r);
         //   if (r == 'ok') {
@@ -205,14 +202,3 @@ $('#loginForm').on('click', '#btnSubmit', function(e){
   });
 
 });
-
-
-    
-
-//$('[id^=commentForm]').(input).html(''); // ovde treba da se gadja svaki input posebno
-
-//$('#commentForm' + product_id)[0].reset(); // i ovde da se proba sa petljom
-
-// $(document).click('#closeBtn', function(){
-//     alert('dfdfd');
-// });
